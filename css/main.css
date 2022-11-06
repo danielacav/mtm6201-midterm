@@ -86,3 +86,58 @@ h3 {
 
 }
 
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 800px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+}
+
+.navoption {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 800px;
+    width: 33.33%;
+}
+
+.navoption picture {
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.navoption a{
+    position: absolute;
+    top: 671px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.navoption p {
+    position: absolute;
+    top: 717px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+
+.logo{
+    position: absolute;
+    width: auto;
+    top: 32px;
+}

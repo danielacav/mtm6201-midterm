@@ -56,7 +56,11 @@ html {
     box-sizing: inherit;
   }
 
+/*Smooth scroll*/
 
+html {
+    scroll-behavior: smooth;
+}
 
 /*Body General styling*/
 
@@ -116,6 +120,10 @@ a {
     color: #FFFFFF;
 }
 
+.active {
+    font-weight: 800;
+}
+
 /*Header styling*/
 header {
     display: flex;
@@ -123,7 +131,7 @@ header {
     align-items: center;
 }
 
-nav {
+.homenav {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -132,15 +140,14 @@ nav {
 .navoption {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     align-items: center;
-    height: 300px;
+    min-height:300px;
     width: 100%;
 }
 
 .navoption a{
     position: absolute;
-    top: 200px;
+    top: 180px;
     font-weight: 700;
     font-size: 1.5rem;
     text-transform: uppercase;
@@ -170,13 +177,20 @@ nav {
     padding: 0 1rem;
 }
 
-section {
+main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 2rem;
     margin: 3rem 0;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: 4rem 0;
 }
 
 .intro p{
@@ -195,7 +209,7 @@ section {
 .cards {
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .card {
@@ -301,11 +315,54 @@ footer a{
     color: #232946;
     margin: 0 1rem
 }
+
+/*Styles for navbar of secondary pages*/
+.secnav {
+    background-color: #40024F;
+    color: #FFFFFF;
+    display: block;
+    text-align: center;
+    padding: 2rem 0;
+    width: 100%;
+}
+
+.secnav li {
+    display: flex;
+    flex-direction: column;
+}
+
+.secnav li a{
+    padding: 1.5rem;
+}
+
+.secnav img{
+    width: 60px;
+    height: 75px;
+}
+
+/*Main content skip link*/
+.skip-link {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .skip-link a{
+    position: absolute;
+    top: -999px;
+    background-color:#232946;
+    color:white;
+    padding: 1rem;
+    font-weight: 700;
+  }
+  
+  .skip-link a:focus {
+    top: 0; 
+  }
+
 /*Breakout point for larger devices*/
 
 @media screen and (min-width: 720px){
     /* Styles applied for min width of 720px and over */
-
     /*Grid layout for the disposition of product cards*/
     .cards {
         grid-template-columns: repeat(4,1fr);
@@ -326,5 +383,29 @@ footer a{
     .testimonials {
         display: flex;
         flex-direction: row;
+    }
+
+    .navoption a{
+    font-size: 2rem;
+    }
+
+    .navoption p {
+    position: absolute;
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: #FFFFFF;
+    }
+
+    /*navbar for secondary pages becomes inline*/
+    .secnav {
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .secnav li {
+        display: inline-block;
     }
 }

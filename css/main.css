@@ -136,7 +136,7 @@ p {
     font-weight: 800;
 }
 
-img {
+img, picture{
     width:100%;
 }
 
@@ -173,25 +173,20 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height:300px;
-    width: 100%;
+    width: 33.33%;
 }
 
 .navoption a{
     position: absolute;
-    top: 180px;
+    top: 10rem;
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-transform: uppercase;
     color: #FFFFFF;
 }
 
 .navoption p {
-    position: absolute;
-    top: 230px;
-    font-weight: 700;
-    font-size: 0.75rem;
-    color: #FFFFFF;
+    display: none;
 }
 
 .logo {
@@ -229,35 +224,29 @@ section {
     text-align: center;
 }
 
-.intro img {
+.intro picture img{
     border-radius: 0.5rem;
 }
 
 /*To target the text immediately after the image in the intro section*/
-.intro img + p {
+.intro picture + p {
     font-weight: 700;
 }
 
 .cards {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 2rem;
+    margin: 2rem 0;
 }
 
 .card {
     display: flex;
     flex-direction: column;
     gap:1rem;
-    width: 100%;
+    margin: 2rem 0;
 }
 
-.cardimg {
-    width: auto;
-    height: 220px;
-    background-image: url(/images/product.jpg);
-    background-position: center;
-    background-size: cover;
+.card img{
     border-radius: 0.5rem;
+    max-width: 688px;
 }
 
 .tags {
@@ -367,7 +356,7 @@ footer a{
     padding: 1.5rem;
 }
 
-.secnav img{
+.secnav picture{
     width: 60px;
     height: 75px;
 }
@@ -434,7 +423,10 @@ footer a{
     /* Styles applied for min width of 720px and over */
     /*Grid layout for the disposition of product cards*/
     .cards {
+        display: grid;
         grid-template-columns: repeat(4,1fr);
+        gap: 2rem;
+        margin: 0;
     }
     
     .testcard div{
@@ -459,10 +451,12 @@ footer a{
     }
 
     .navoption p {
-    position: absolute;
-    font-weight: 700;
-    font-size: 0.75rem;
-    color: #FFFFFF;
+        display: block;
+        position: absolute;
+        top: 12rem;
+        font-weight: 700;
+        font-size: 1rem;
+        color: #FFFFFF;
     }
 
     /*navbar for secondary pages becomes inline*/

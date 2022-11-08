@@ -27,7 +27,21 @@
         <section class="intro">
             <h1>About us</h1>
             <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
-            <img src="images/intro-section-1186x216.png" alt="Image of team members cooking">
+            <picture>
+                <source srcset="images/intro-1120_x_203.png,
+                                images/intro-2240_x_406.png 2x"
+                        media="(max-width: 320px)"/>
+            
+                <source srcset="images/intro-544_x_99.png,
+                                images/intro-1088_x_198.png 2x"
+                        media="(max-width: 720px)"/>
+
+                <source srcset="images/intro-1120_x_203.png,
+                                images/intro-2240_x_406.png 2x"
+                        media="(max-width: 1440px)"/>
+            
+                <img src="images/intro-1120_x_203.png" alt="Image of pumpkin cookies">
+            </picture>
 
         </section>
 

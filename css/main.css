@@ -74,6 +74,29 @@ h1 {
     font-size: 3rem;
     color: rgba(35, 41, 70, 0.75);
     text-align: center;
+    opacity: 0.2;
+
+    /*aplied the nostlgic animation*/
+    animation-name: nostalgic;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+/*H1 animation, to change the opacity of the title*/
+
+@keyframes nostalgic {
+    20% {
+        opacity: 0.4;
+    }
+
+    100% {
+        scale: 1.2;
+        opacity: 1;
+    }
+
 }
 
 h2 {
@@ -95,19 +118,22 @@ p {
     line-height: 22px;
 }
 
-button {
-    padding: 8px 16px;
+.button {
+    padding: 0.5rem 1rem;
     min-height: 40px;
     background: #40024F;
     border-radius: 8px;
     color: #FFFFFF;
-    font-size: 20px;
+    font-size: 1.2rem;
     transition: all 0.5s;
-    border: 0;
 }
 
-button:hover {
+/*Button transforms when hovering*/
+.button:hover {
     transform: scale(1.05);
+    background: #A2D20E;
+    color: #232946;
+    font-weight: 800;
 }
 
 img {
@@ -117,6 +143,13 @@ img {
 a {
     text-decoration: none;
     color: #FFFFFF;
+    transition: all 1s;
+
+}
+
+a:hover {
+    text-decoration: underline;
+    scale: 1.1;
 }
 
 .active {
@@ -264,11 +297,11 @@ section {
     gap: 1rem;
 }
 
-.intro button {
+.intro .button {
     background-color: #A2D20E;
 }
 
-.product div + button {
+.product div + .button {
     background-color: #A2D20E;
 }
 
@@ -326,12 +359,11 @@ footer a{
     width: 100%;
 }
 
-.secnav li {
-    display: flex;
-    flex-direction: column;
+.options {
+    display: inline-block
 }
 
-.secnav li a{
+.options a{
     padding: 1.5rem;
 }
 
@@ -378,6 +410,24 @@ footer a{
     border-radius: 0.5rem;
  }
 
+ button {
+    min-height: 40px;
+    background: #40024F;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    border: none;
+    transition: all 0.5s;
+ }
+
+ button:hover {
+    transform: scale(1.05);
+    background: #A2D20E;
+    color: #232946;
+    font-weight: 700;
+    text-decoration: underline;
+}
+ 
 /*Breakout point for larger devices*/
 
 @media screen and (min-width: 720px){

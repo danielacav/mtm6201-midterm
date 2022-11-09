@@ -18,20 +18,20 @@
     </div>
 
     <header>
-        <nav class="homenav">
+        <nav role="navigation" class="homenav">
             <div class="navoption">
                 <picture>
                     <source srcset="images/menu-107_x_178.png,
                                     images/menu-214_x_356.png 2x"
-                            media="(max-width: 320px)"/>
+                            media="(max-width: 320px)">
                 
                     <source srcset="images/menu-240_x_800.png,
                                     images/menu-480_x_1600.png 2x"
-                            media="(max-width: 720px)"/>
+                            media="(max-width: 720px)">
 
                     <source srcset="images/menu-480_x_800.png,
                                     images/menu-960_x_1600.png 2x"
-                            media="(max-width: 1440px)"/>
+                            media="(max-width: 1440px)">
                 
                     <img src="images/menu-480_x_800.png" alt="Picture of dark chocolate cake">
                 </picture>
@@ -43,15 +43,15 @@
                 <picture>
                     <source srcset="images/aboutus-107_x_178.png,
                                     images/aboutus-214_x_356.png 2x"
-                            media="(max-width: 320px)"/>
+                            media="(max-width: 320px)">
                 
                     <source srcset="images/aboutus-240_x_800.png,
                                     images/aboutus-480_x_1600.png 2x"
-                            media="(max-width: 720px)"/>
+                            media="(max-width: 720px)">
 
                     <source srcset="images/aboutus-480_x_800.png,
                                     images/aboutus-960_x_1600.png 2x"
-                            media="(max-width: 1440px)"/>
+                            media="(max-width: 1440px)">
                 
                     <img src="images/aboutus-480_x_800.png" alt="Picture of dark chocolate cake">
                 </picture>
@@ -63,15 +63,15 @@
                 <picture>
                     <source srcset="images/contact-107_x_178.png,
                                     images/contact-214_x_356.png 2x"
-                            media="(max-width: 320px)"/>
+                            media="(max-width: 320px)">
                 
                     <source srcset="images/contact-240_x_800.png,
                                     images/contact-480_x_1600.png 2x"
-                            media="(max-width: 720px)"/>
+                            media="(max-width: 720px)">
 
                     <source srcset="images/contact-480_x_800.png,
                                     images/contact-960_x_1600.png 2x"
-                            media="(max-width: 1440px)"/>
+                            media="(max-width: 1440px)">
                 
                     <img src="images/contact-480_x_800.png" alt="Picture of dark chocolate cake">
                 </picture>
@@ -85,113 +85,113 @@
 
     <div class="wrapper">
         <!--Added a class of wrapper since all elements require the same margin-->
-        <main class="intro" id="maincontent">
+        <main class="intro" role="main" id="maincontent">
             <h1>It all started in my own kitchen</h1>
             <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
             <picture>
                 <source srcset="images/intro-1120_x_203.png,
-                                images/intro-2240_x_406.png 2x"
-                        media="(max-width: 320px)"/>
+                images/intro-2240_x_406.png 2x"
+                media="(max-width: 320px)">
             
                 <source srcset="images/intro-544_x_99.png,
                                 images/intro-1088_x_198.png 2x"
-                        media="(max-width: 720px)"/>
+                        media="(max-width: 720px)">
 
                 <source srcset="images/intro-1120_x_203.png,
                                 images/intro-2240_x_406.png 2x"
-                        media="(max-width: 1440px)"/>
+                        media="(max-width: 1440px)">
             
                 <img src="images/intro-1120_x_203.png" alt="Image of pumpkin cookies">
             </picture>
             <p>Now I will take your orders whenever you need</p>
-            <a class="button" href="#">Catering</a>
+            <a class="button" aria-label="Go to contact page" href="contact.html">Contact</a>
         </main>
 
         <section class="product">
             <h2>Our fav picks to order today</h2>
             <!--Created the div with a class of "cards" to hug all available information of products. I will assign a grid disposition to it in the css-->
             <div class="cards">
-                <div class="card">
-                    <picture>
+                <div itemscope itemtype="https://schema.org/Product" class="card">
+                    <picture itemprop="image">
                         <source srcset="images/product-256_x_256.jpg,
                                         images/product-512_x_512.jpg 2x"
-                                media="(max-width: 320px)"/>
+                                media="(max-width: 320px)">
                     
                         <source srcset="images/product-688_x_688.jpg,
                                         images/product-1376_x_1376.jpg 2x"
-                                media="(max-width: 720px)"/>
+                                media="(max-width: 720px)">
     
                         <source srcset="images/product-352_x_352.jpg,
                                         images/product-704_x_704.jpg 2x"
-                                media="(max-width: 1440px)"/>
+                                media="(max-width: 1440px)">
                     
                         <img src="images/product-688_x_688.jpg" alt="Product image">
                     </picture>
                     <div class="title">
-                        <h3>Product name</h3>
+                        <h3 itemprop="name" >Product name</h3>
                         <div class="tags">
-                            <div class="tag1">
+                            <div itemprop="category" class="tag1">
                                 <p>Anger</p>
                             </div>
-                            <div class="tag2">
+                            <div itemprop="category" class="tag2">
                                 <p>Rage</p>
                             </div>
                         </div>
                     </div>
     
                     <div class="info">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                        <p class="price">$150</p>
-                        <a class="button" href="#">Add to cart</a>
+                        <p itemprop="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                        <p itemprop="price" class="price">$150</p>
+                        <a class="button" aria-label="Add product to your cart" href="#">Add to cart</a>
                     </div>
                 </div>
-                <div class="card">
-                    <picture>
+                <div itemscope itemtype="https://schema.org/Product" class="card">
+                    <picture itemprop="image">
                         <source srcset="images/product-256_x_256.jpg,
                                         images/product-512_x_512.jpg 2x"
-                                media="(max-width: 320px)"/>
+                                media="(max-width: 320px)">
                     
                         <source srcset="images/product-688_x_688.jpg,
                                         images/product-1376_x_1376.jpg 2x"
-                                media="(max-width: 720px)"/>
+                                media="(max-width: 720px)">
     
                         <source srcset="images/product-352_x_352.jpg,
                                         images/product-704_x_704.jpg 2x"
-                                media="(max-width: 1440px)"/>
+                                media="(max-width: 1440px)">
                     
                         <img src="images/product-688_x_688.jpg" alt="Product image">
                     </picture>
                     <div class="title">
-                        <h3>Product name</h3>
+                        <h3 itemprop="name" >Product name</h3>
                         <div class="tags">
-                            <div class="tag1">
+                            <div itemprop="category" class="tag1">
                                 <p>Anger</p>
                             </div>
-                            <div class="tag2">
+                            <div itemprop="category" class="tag2">
                                 <p>Rage</p>
                             </div>
                         </div>
                     </div>
     
                     <div class="info">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                        <p class="price">$150</p>
-                        <a class="button" href="#">Add to cart</a>
+                        <p itemprop="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                        <p itemprop="price" class="price">$150</p>
+                        <a class="button" aria-label="Add product to your cart" href="#">Add to cart</a>
                     </div>
                 </div>
-                <div class="card">
+                <div itemscope itemtype="https://schema.org/Product" class="card">
                     <picture>
                         <source srcset="images/product-256_x_256.jpg,
                                         images/product-512_x_512.jpg 2x"
-                                media="(max-width: 320px)"/>
+                                media="(max-width: 320px)">
                     
                         <source srcset="images/product-688_x_688.jpg,
                                         images/product-1376_x_1376.jpg 2x"
-                                media="(max-width: 720px)"/>
+                                media="(max-width: 720px)">
     
                         <source srcset="images/product-352_x_352.jpg,
                                         images/product-704_x_704.jpg 2x"
-                                media="(max-width: 1440px)"/>
+                                media="(max-width: 1440px)">
                     
                         <img src="images/product-688_x_688.jpg" alt="Product image">
                     </picture>
@@ -210,181 +210,181 @@
                     <div class="info">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
                         <p class="price">$150</p>
-                        <a class="button" href="#">Add to cart</a>
+                        <a class="button" aria-label="Add product to your cart" href="#">Add to cart</a>
                     </div>
                 </div>
-                <div class="card">
-                    <picture>
+                <div itemscope itemtype="https://schema.org/Product" class="card">
+                    <picture itemprop="image">
                         <source srcset="images/product-256_x_256.jpg,
                                         images/product-512_x_512.jpg 2x"
-                                media="(max-width: 320px)"/>
+                                media="(max-width: 320px)">
                     
                         <source srcset="images/product-688_x_688.jpg,
                                         images/product-1376_x_1376.jpg 2x"
-                                media="(max-width: 720px)"/>
+                                media="(max-width: 720px)">
     
                         <source srcset="images/product-352_x_352.jpg,
                                         images/product-704_x_704.jpg 2x"
-                                media="(max-width: 1440px)"/>
+                                media="(max-width: 1440px)">
                     
                         <img src="images/product-688_x_688.jpg" alt="Product image">
                     </picture>
                     <div class="title">
-                        <h3>Product name</h3>
+                        <h3 itemprop="name" >Product name</h3>
                         <div class="tags">
-                            <div class="tag1">
+                            <div itemprop="category" class="tag1">
                                 <p>Anger</p>
                             </div>
-                            <div class="tag2">
+                            <div itemprop="category" class="tag2">
                                 <p>Rage</p>
                             </div>
                         </div>
                     </div>
     
                     <div class="info">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                        <p class="price">$150</p>
-                        <a class="button" href="#">Add to cart</a>
+                        <p itemprop="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                        <p itemprop="price" class="price">$150</p>
+                        <a class="button" aria-label="Add product to your cart" href="#">Add to cart</a>
                     </div>
                 </div>
-                <div class="card">
-                    <picture>
+                <div itemscope itemtype="https://schema.org/Product" class="card">
+                    <picture itemprop="image">
                         <source srcset="images/product-256_x_256.jpg,
                                         images/product-512_x_512.jpg 2x"
-                                media="(max-width: 320px)"/>
+                                media="(max-width: 320px)">
                     
                         <source srcset="images/product-688_x_688.jpg,
                                         images/product-1376_x_1376.jpg 2x"
-                                media="(max-width: 720px)"/>
+                                media="(max-width: 720px)">
     
                         <source srcset="images/product-352_x_352.jpg,
                                         images/product-704_x_704.jpg 2x"
-                                media="(max-width: 1440px)"/>
+                                media="(max-width: 1440px)">
                     
                         <img src="images/product-688_x_688.jpg" alt="Product image">
                     </picture>
                     <div class="title">
-                        <h3>Product name</h3>
+                        <h3 itemprop="name" >Product name</h3>
                         <div class="tags">
-                            <div class="tag1">
+                            <div itemprop="category" class="tag1">
                                 <p>Anger</p>
                             </div>
-                            <div class="tag2">
+                            <div itemprop="category" class="tag2">
                                 <p>Rage</p>
                             </div>
                         </div>
                     </div>
     
                     <div class="info">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                        <p class="price">$150</p>
-                        <a class="button" href="#">Add to cart</a>
+                        <p itemprop="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                        <p itemprop="price" class="price">$150</p>
+                        <a class="button" aria-label="Add product to your cart" href="#">Add to cart</a>
                     </div>
                 </div>
-                <div class="card">
-                    <picture>
+                <div itemscope itemtype="https://schema.org/Product" class="card">
+                    <picture itemprop="image">
                         <source srcset="images/product-256_x_256.jpg,
                                         images/product-512_x_512.jpg 2x"
-                                media="(max-width: 320px)"/>
+                                media="(max-width: 320px)">
                     
                         <source srcset="images/product-688_x_688.jpg,
                                         images/product-1376_x_1376.jpg 2x"
-                                media="(max-width: 720px)"/>
+                                media="(max-width: 720px)">
     
                         <source srcset="images/product-352_x_352.jpg,
                                         images/product-704_x_704.jpg 2x"
-                                media="(max-width: 1440px)"/>
+                                media="(max-width: 1440px)">
                     
                         <img src="images/product-688_x_688.jpg" alt="Product image">
                     </picture>
                     <div class="title">
-                        <h3>Product name</h3>
+                        <h3 itemprop="name" >Product name</h3>
                         <div class="tags">
-                            <div class="tag1">
+                            <div itemprop="category" class="tag1">
                                 <p>Anger</p>
                             </div>
-                            <div class="tag2">
+                            <div itemprop="category" class="tag2">
                                 <p>Rage</p>
                             </div>
                         </div>
                     </div>
     
                     <div class="info">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                        <p class="price">$150</p>
-                        <a class="button" href="#">Add to cart</a>
+                        <p itemprop="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                        <p itemprop="price" class="price">$150</p>
+                        <a class="button" aria-label="Add product to your cart" href="#">Add to cart</a>
                     </div>
                 </div>
-                <div class="card">
-                    <picture>
+                <div itemscope itemtype="https://schema.org/Product" class="card">
+                    <picture itemprop="image">
                         <source srcset="images/product-256_x_256.jpg,
                                         images/product-512_x_512.jpg 2x"
-                                media="(max-width: 320px)"/>
+                                media="(max-width: 320px)">
                     
                         <source srcset="images/product-688_x_688.jpg,
                                         images/product-1376_x_1376.jpg 2x"
-                                media="(max-width: 720px)"/>
+                                media="(max-width: 720px)">
     
                         <source srcset="images/product-352_x_352.jpg,
                                         images/product-704_x_704.jpg 2x"
-                                media="(max-width: 1440px)"/>
+                                media="(max-width: 1440px)">
                     
                         <img src="images/product-688_x_688.jpg" alt="Product image">
                     </picture>
                     <div class="title">
-                        <h3>Product name</h3>
+                        <h3 itemprop="name" >Product name</h3>
                         <div class="tags">
-                            <div class="tag1">
+                            <div itemprop="category" class="tag1">
                                 <p>Anger</p>
                             </div>
-                            <div class="tag2">
+                            <div itemprop="category" class="tag2">
                                 <p>Rage</p>
                             </div>
                         </div>
                     </div>
     
                     <div class="info">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                        <p class="price">$150</p>
-                        <a class="button" href="#">Add to cart</a>
+                        <p itemprop="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                        <p itemprop="price" class="price">$150</p>
+                        <a class="button" aria-label="Add product to your cart" href="#">Add to cart</a>
                     </div>
                 </div>
-                <div class="card">
-                    <picture>
+                <div itemscope itemtype="https://schema.org/Product" class="card">
+                    <picture itemprop="image">
                         <source srcset="images/product-256_x_256.jpg,
                                         images/product-512_x_512.jpg 2x"
-                                media="(max-width: 320px)"/>
+                                media="(max-width: 320px)">
                     
                         <source srcset="images/product-688_x_688.jpg,
                                         images/product-1376_x_1376.jpg 2x"
-                                media="(max-width: 720px)"/>
+                                media="(max-width: 720px)">
     
                         <source srcset="images/product-352_x_352.jpg,
                                         images/product-704_x_704.jpg 2x"
-                                media="(max-width: 1440px)"/>
+                                media="(max-width: 1440px)">
                     
                         <img src="images/product-688_x_688.jpg" alt="Product image">
                     </picture>
                     <div class="title">
-                        <h3>Product name</h3>
+                        <h3 itemprop="name" >Product name</h3>
                         <div class="tags">
-                            <div class="tag1">
+                            <div itemprop="category" class="tag1">
                                 <p>Anger</p>
                             </div>
-                            <div class="tag2">
+                            <div itemprop="category" class="tag2">
                                 <p>Rage</p>
                             </div>
                         </div>
                     </div>
     
                     <div class="info">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                        <p class="price">$150</p>
-                        <a class="button" href="#">Add to cart</a>
+                        <p itemprop="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                        <p itemprop="price" class="price">$150</p>
+                        <a class="button" aria-label="Add product to your cart" href="#">Add to cart</a>
                     </div>
                 </div>
             </div>
-            <a class="button" href="#">See all products</a>
+            <a class="button" aria-label="Go to see all products" href="#">See all products</a>
         </section>
 
         <section class="testimonials">
@@ -406,7 +406,7 @@
                         <p>From "your life, your way podcast"</p>
                     </div>
                 </div>
-                <p>"Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus!"</p>
+                <p> "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus!"</p>
             </div>
         </section>
 
